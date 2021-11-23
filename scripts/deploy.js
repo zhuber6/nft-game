@@ -19,25 +19,6 @@ const main = async () => {
 
   await gameContract.deployed();
   console.log("Contract deployed to:", gameContract.address);
-  
-  let txn;
-  // mint index 2 character
-  txn = await gameContract.mintCharacterNFT(3);
-  await txn.wait();
-  
-  txn = await gameContract.attackBoss();
-  await txn.wait();
-
-  console.log("Done attacking");
-
-  // let defaultChar = await gameContract.getAllDefaultCharacters();
-  // console.log("defaultChar", defaultChar);
-
-  let currUser = await gameContract.checkIfUserHasNFT();
-  console.log("currUser name:", currUser.name, "HP:", currUser.hp.toString());
-
-  let BigBoss = await gameContract.getBigBoss();
-  console.log("BigBoss HP:", BigBoss.hp.toString());
 };
 
 const runMain = async () => {
