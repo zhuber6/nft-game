@@ -158,7 +158,7 @@ contract MyEpicGame  is ERC721{
             charAttributes.name,
             ' -- NFT #: ',
             Strings.toString(_tokenId),
-            '", "description": "This is an NFT that lets people play in the game Always Sunny Slayer!", "image": "',
+            '", "description": "This is an NFT that lets people play in the game Always Sunny Slayer!", "image": "ipfs://',
             charAttributes.imageURI,
             '", "attributes": [ { "trait_type": "Health Points", "value": ',strHp,' }, { "trait_type": "Attack Damage", "value": ',
             strAttackDamage,'} ]}'
